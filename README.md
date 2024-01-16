@@ -1,4 +1,4 @@
-# Employee Management System
+# Student Management System
 
 This is a simple Employee Management System built using Spring Boot and MySQL.
 
