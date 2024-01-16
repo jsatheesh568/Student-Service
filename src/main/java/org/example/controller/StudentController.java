@@ -3,7 +3,7 @@ package org.example.controller;
 @org.springframework.web.bind.annotation.RestController
 @org.springframework.web.bind.annotation.RequestMapping("/api/students")
 @io.swagger.annotations.Api(tags = "Student Management")
-public class EmployeeController {
+public class StudentController {
 
     @org.springframework.beans.factory.annotation.Autowired
     private org.example.service.EmployeeService employeeService;
