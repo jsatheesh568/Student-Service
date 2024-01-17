@@ -93,6 +93,6 @@ The application will be accessible at `http://localhost:8080`.
 - **Delete Student:**
 
     ```http
-    DELETE /api/employees/{employeeId}
+    DELETE /api/students/{employeeId}
     ```
 
