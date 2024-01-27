@@ -1,6 +1,6 @@
 # Student Management System
 
-This is a simple Employee Management System built using Spring Boot and MySQL.
+This is a simple Student Management System built using Spring Boot and MySQL.
 
 ## Getting Started
 
@@ -21,7 +21,7 @@ This is a simple Employee Management System built using Spring Boot and MySQL.
 2. Configure MySQL database in `src/main/resources/application.properties`:
 
     ```properties
-    spring.datasource.url=jdbc:mysql://localhost:3306/Employee
+    spring.datasource.url=jdbc:mysql://localhost:3306/Student
     spring.datasource.username=root
     spring.datasource.password=root
     spring.jpa.show-sql=true
@@ -41,7 +41,7 @@ The application will be accessible at `http://localhost:8080`.
 - **Create Employee:**
 
     ```http
-    POST /api/employees
+    POST /api/Students
     ```
 
     Request Body:
@@ -58,22 +58,22 @@ The application will be accessible at `http://localhost:8080`.
     }
     ```
 
-- **Get All Employees:**
+- **Get All Students:**
 
     ```http
-    GET /api/employees
+    GET /api/Students
     ```
 
-- **Get Employee by ID:**
+- **Get Student by ID:**
 
     ```http
-    GET /api/employees/{employeeId}
+    GET  api/Students /{employeeId}
     ```
 
-- **Update Employee:**
+- **Update Student:**
 
     ```http
-    PUT /api/employees/{employeeId}
+    PUT /api/Students/{employeeId}
     ```
 
     Request Body:
@@ -90,9 +90,9 @@ The application will be accessible at `http://localhost:8080`.
     }
     ```
 
-- **Delete Employee:**
+- **Delete Student:**
 
     ```http
-    DELETE /api/employees/{employeeId}
+    DELETE /api/students/{employeeId}
     ```
 
