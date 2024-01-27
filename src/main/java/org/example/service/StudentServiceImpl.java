@@ -1,7 +1,7 @@
 package org.example.service;
 
 @org.springframework.stereotype.Service
-public class EmployeeServiceImpl implements EmployeeService {
+public class StudentServiceImpl implements StudentService {
 
     @org.springframework.beans.factory.annotation.Autowired
     private org.example.repository.EmployeeRepository employeeRepository;

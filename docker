@@ -1,0 +1,20 @@
+# Use a lightweight Linux distribution as the base image
+FROM openjdk:8-jre-alpine
+
+# Set environment variables
+ENV JAVA_VERSION 1.8.0_401
+
+# Set the Java home directory
+ENV JAVA_HOME /usr/lib/jvm/java-${JAVA_VERSION}
+
+# Set the PATH variable to include Java binaries
+ENV PATH $JAVA_HOME/bin:$PATH
+
+# Create a directory for your application
+WORKDIR /app
+
+# Copy your Java application JAR file to the container
+COPY Demo-service-1.0-SNAPSHOT.jar/app/Demo-service-1.0-SNAPSHOT.jar
+
+# Specify the default command to run your application
+CMD ["java", "-jar", "Demo-service-1.0-SNAPSHOT.jar"]

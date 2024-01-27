@@ -1,6 +1,6 @@
 package org.example.service;
 
-public interface EmployeeService {
+public interface StudentService {
 
     java.util.List<org.example.model.Employee> getAllEmployees();
 
