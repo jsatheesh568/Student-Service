@@ -1,0 +1,34 @@
+version: '3'
+services:
+  mysql-container:
+    image: satheeshdev1890/mysql-container:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3308:3306"
+    networks:
+      - my-network
+
+  spring-boot-app:
+    image: satheeshdev1890/demo-service:latest  # Update this line
+    volumes:
+      - type: bind
+        source: /var/run/docker.sock
+        target: /var/run/docker.sock
+    container_name: spring-boot-app-container
+    restart: always
+    environment:
+      SPRING_PROFILES_ACTIVE: dev
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql-container:3306/Student?autoReconnect=true&useSSL=false
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: root
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mysql-container
+    networks:
+      - my-network
+
+networks:
+  my-network:
+    driver: bridge
