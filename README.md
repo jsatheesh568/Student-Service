@@ -9,6 +9,7 @@ This is a simple Student Management System built using Spring Boot and MySQL.
 - Java 8 or higher
 - MySQL
 - Maven
+- Docker
 
 ### Setup
 
